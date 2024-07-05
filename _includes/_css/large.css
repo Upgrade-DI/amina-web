@@ -228,11 +228,12 @@ header div a{ margin: 0px 10px; color: white; }
 .sec-2 .item .text-overlay {
     position: absolute;
     bottom: 40px;
-    left: 125px;
+    left: 10px;
+    right: 10px;
+    text-align: center;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
-    font-size: 1.5em;
 }
 
 .sec-2 .item:hover {
