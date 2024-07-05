@@ -1,0 +1,866 @@
+/* ====== F O N T S ====== */
+/* Importar fuentes aquí si es necesario */
+
+/* ====== F O N T S (end) ====== */
+
+@font-face {
+    font-family: 'Inter-Thin';
+    font-weight: 100;
+    src: url('../../_fonts/Inter-Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Inter-ExtraLight';
+    font-weight: 200;
+    src: url('../../_fonts/Inter-ExtraLight.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Inter-Light';
+    font-weight: 300;
+    src: url('../../_fonts/Inter-Light.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    font-weight: 400;
+    src: url('../../_fonts/Inter-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Inter-Medium';
+    font-weight: 500;
+    src: url('../../_fonts/Inter-Medium.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Inter-SemiBold';
+    font-weight: 600;
+    src: url('../../_fonts/Inter-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    font-weight: 700;
+    src: url('../../_fonts/Inter-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Inter-ExtraBold';
+    font-weight: 800;
+    src: url('../../_fonts/Inter-ExtraBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Inter-Black';
+    font-weight: 900;
+    src: url('../../_fonts/Inter-Black.otf') format('opentype');
+}
+
+/* Aplicar las diferentes variantes de la fuente Inter */
+/* body {
+    font-family: 'Inter-Regular', sans-serif;
+}
+
+h1 {
+    font-family: 'Inter-Bold', sans-serif;
+}
+
+h2 {
+    font-family: 'Inter-SemiBold', sans-serif;
+}
+
+p {
+    font-family: 'Inter-Light', sans-serif;
+} */
+
+
+/*Eliminamos márgenes del "body" */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+	font-family: 'Inter-Light', sans-serif;
+    background-color: #f0f0f0; /* Fondo por defecto */
+}
+
+#big-container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+a{ text-decoration: none; }
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    box-sizing: border-box;
+    color: white;
+    position: absolute; /* Asegura que el header esté encima del contenido */
+    width: 100%; /* Asegura que el header ocupe todo el ancho */
+    top: 0; /* Posiciona el header en la parte superior */
+	z-index: 1;
+}
+
+#logo {
+    width: 150px;
+}
+
+#menu_header {
+    flex: 1;
+    text-align: center;
+}
+
+#menu_header a {
+    color: white;
+    margin: 0 10px;
+}
+
+header div a{ margin: 0px 10px; color: white; }
+
+#btn_register {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none; /* Remover bordes por defecto */
+    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+}
+
+#btn_register:hover {
+    background-color: #444; /* Color de fondo al pasar el mouse */
+}
+
+/* HOME */
+.sec-1, .cons-sec-1 {
+    background-image: url('../../_images/sec-1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    position: relative; /* Asegura que el contenido esté debajo del header */
+    min-height: calc(83vh - 91px); /* Asegura que la sección ocupe al menos la altura de la ventana */
+}
+
+.sec-1 div {
+    flex: 1;
+    margin: 20px;
+}
+
+.sec-1 h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.sec-1 span {
+    color: black;
+}
+
+.sec-1 p {
+    line-height: 1.6em;
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+#cta-button {
+	background-color: black;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#cta-button:hover {
+    background-color: #444;
+}
+
+/* #image-container {
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+} */
+
+#image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.sec-2 {
+    display: flex;
+    overflow: hidden;
+}
+
+.sec-2 .item {
+    position: relative;
+    width: 25%;
+    height: 400px; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.sec-2 .item-1 {
+    background-image: url('../../_images/rec2.jpg');
+}
+
+.sec-2 .item-2 {
+    background-image: url('../../_images/rec3.jpg');
+}
+
+.sec-2 .item-3 {
+    background-image: url('../../_images/rec4.jpg');
+}
+
+.sec-2 .item-4 {
+    background-image: url('../../_images/rec4.jpg');
+}
+
+.sec-2 .item .text-overlay {
+    position: absolute;
+    bottom: 40px;
+    left: 125px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.5em;
+}
+
+.sec-2 .item:hover {
+    z-index: 10;
+}
+
+.sec-2 .item:nth-child(odd):hover {
+    transform: scaleX(2);
+    transform-origin: left;
+}
+
+.sec-2 .item:nth-child(even):hover {
+    transform: scaleX(2);
+    transform-origin: right;
+}
+
+
+
+.sec-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    gap: 20px; /* Espaciado entre las tarjetas */
+    margin: 70px 75px;
+}
+
+.sec-3 .item {
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.sec-3 .item .content {
+    padding: 20px;
+    background: linear-gradient(90deg, #97B0B9 0%, #94B9FF 100%); /* Degradado original */
+    flex-grow: 1;
+}
+
+.sec-3 .item-2 .content,
+.sec-3 .item-4 .content {
+    background: linear-gradient(90deg, #94B9FF 0%, #97B0B9 100%); /* Degradado invertido */
+}
+
+.sec-3 .item .image-container {
+    background: linear-gradient(90deg, #97B0B9 0%, #94B9FF 100%);
+    padding: 10px 0; /* Ajusta el padding según necesites */
+    text-align: center;
+}
+
+.sec-3 .item-2 .image-container,
+.sec-3 .item-4 .image-container {
+    background: linear-gradient(90deg, #94B9FF 0%, #97B0B9 100%);
+}
+
+.sec-3 .item img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: -20px;
+}
+
+.sec-3 .item h2 {
+    font-size: 1.5em;
+    color: #333; /* Color del texto */
+    margin-bottom: 10px;
+}
+
+.sec-3 .item p {
+    font-size: 1em;
+    color: white; /* Color del texto */
+    margin-bottom: 20px;
+}
+
+.sec-3 .item button {
+    background-color: #4a76a8; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.sec-3 .item button:hover {
+    background-color: #365f85; /* Color de fondo del botón al pasar el cursor */
+}
+
+.sec-4 {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 75px;
+    background: var(--Gradient, linear-gradient(90deg, #94B9FF 0%, #97B0B9 100%));
+}
+
+.sec-4 .left-column,
+.sec-4 .right-column {
+    flex: 1;
+}
+
+.sec-4 .right-column { text-align: center; }
+
+.sec-4 .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 40%; /* Ajustar el ancho de la columna izquierda según sea necesario */
+}
+
+.sec-4 .card {
+    background-color: transparent;
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid var(--Light, #D2DDF8);
+    position: relative;
+    cursor: pointer; /* Cambia el cursor para indicar que se puede hacer clic */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sec-4 .card h3 {
+    font-size: 1.2em;
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black; /* Color del título */
+}
+
+.sec-4 .card .arrow {
+    font-size: .75em;
+}
+
+.sec-4 .card .content {
+    display: none;
+    font-size: 1em;
+}
+
+.sec-4 .card.active {
+    background-color: white;
+}
+
+.sec-4 .card.active h3 {
+    color: #496692; /* Color del título cuando está activo */
+}
+
+.sec-4 .card.active .content {
+    display: block;
+    padding: 0px 10px;
+}
+
+.sec-4 .right-column img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px; /* Opcional: para redondear los bordes de la imagen */
+}
+
+.sec-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 75px;
+    position: relative;
+    z-index: 1;
+    background-color: white;
+}
+
+.sec-5 .text-content {
+    flex: 1;
+    padding: 20px;
+    color: #333; /* Color del texto */
+}
+
+.sec-5 .text-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.sec-5 .text-content h3 {
+    font-size: 1.5em;
+    color: #496692; /* Color de texto secundario */
+    margin-bottom: 20px;
+}
+
+.sec-5 .text-content p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.sec-5 .image-content {
+    flex: 1;
+    text-align: center;
+}
+
+.sec-5 .image-content svg {
+    max-width: 70%;
+    height: auto;
+}
+
+#circle1{ cursor: pointer; }
+
+#circle1:hover {
+    fill: #94B9FF;
+    transition: .5s;
+}
+
+#circle1:hover .circle1-path{
+    fill: white; /* Cambiar color de las rutas asociadas */
+}
+
+.sec-6 {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #97B0B9 0%, #94B9FF 100%); /* Fondo degradado */
+    padding: 0px 75px;
+}
+
+.sec-6 .left-column,
+.sec-6 .right-column {
+    flex: 1;
+}
+
+.sec-6 .left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 0px;
+    max-width: 50%; /* Ajustar el ancho de la columna izquierda según sea necesario */
+    color: white; /* Color del texto */
+    margin-right: 50px;
+}
+
+.sec-6 .left-column h2 {
+    font-size: 1.5em;
+    margin: 0px;
+    width: 75%;
+}
+
+.sec-6 .left-column h3 {
+    font-size: 1.5em;
+    margin: 0px;
+    color: #2A4D69; /* Color del subtítulo */
+    width: 75%;
+}
+
+.sec-6 .left-column p {
+    font-size: 1em;
+    width: 75%;
+    line-height: 1.5em;
+}
+
+.sec-6 .right-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%; /* Ajustar el ancho de la columna derecha según sea necesario */
+    position: relative;
+    margin-top: -56px;
+}
+
+.sec-6 .right-column img {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    width: auto;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* General styles for the cons-sec-1 section */
+.cons-sec-1 {
+    background-image: url('../../_images/sec-1.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative; /* Asegura que el contenido esté debajo del header */
+    min-height: calc(83vh - 91px); /* Asegura que la sección ocupe al menos la altura de la ventana */
+}
+
+/* Styles for the centered content in cons-sec-1 */
+.cons-sec-1 .content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: white; /* Adjust text color for better readability */
+}
+
+.cons-sec-1 .cons-logo {
+    width: 100px;
+    margin-bottom: -30px;
+}
+
+.cons-sec-1 h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.cons-sec-1 .buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px;
+    max-width: 500px; /* Adjust the max width as needed */
+}
+
+.cons-sec-1 .buttons-container button {
+    background-color: #000; /* Adjust button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.cons-sec-1 .buttons-container button:hover {
+    background-color: #444; /* Button hover color */
+}
+
+/* General styles for the cons-sec-2 section */
+.cons-sec-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff; /* Background color for better readability */
+    min-height: 50vh; /* Adjust height as needed */
+}
+
+.cons-sec-2 .content-center {
+    max-width: 800px; /* Adjust max-width as needed */
+}
+
+.cons-sec-2 h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333; /* Text color */
+}
+
+.cons-sec-2 p {
+    font-size: 1em;
+    color: #777; /* Text color */
+    line-height: 1.5; /* Line height for better readability */
+}
+
+/* General styles for the cons-sec-3 section */
+.cons-sec-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background: linear-gradient(90deg, #97B0B9 0%, #94B9FF 100%);
+    min-height: 50vh; /* Adjust height as needed */
+}
+
+.cons-sec-3 .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Adjust max-width as needed */
+    width: 100%;
+}
+
+.cons-sec-3 .text-content {
+    max-width: 45%; /* Adjust as needed */
+    color: white; /* Adjust text color for better readability */
+    padding: 0px 50px;
+    
+}
+
+.cons-sec-3 .text-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333; /* Text color */
+    width: 70%;
+}
+
+.cons-sec-3 .text-content h2 span{ color: #496692; /* Text color */ }
+
+
+.cons-sec-3 .text-content p {
+    font-size: 1em;
+    color: white; /* Text color */
+    line-height: 1.5; /* Line height for better readability */
+    width: 75%;
+}
+
+.cons-sec-3 .image-content {
+    max-width: 50%; /* Adjust as needed */
+}
+
+.cons-sec-3 .image-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: to add some shadow */
+}
+
+/* General styles for the cons-sec-4 section */
+.cons-sec-4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Background color for better readability */
+    min-height: 50vh; /* Adjust height as needed */
+}
+
+.cons-sec-4 .content-center {
+    max-width: 1200px; /* Adjust max-width as needed */
+    width: 100%;
+}
+
+.cons-sec-4 h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    text-align: center; /* Centered heading */
+    color: #333; /* Text color */
+}
+
+.cons-sec-4 .features {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Gap between features */
+    padding: 0px 50px;
+}
+
+.cons-sec-4 .feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: 1px solid #e5e5e5; /* Border between features */
+    padding-top: 20px;
+}
+
+.cons-sec-4 .feature-title{ width: 20%; }
+.cons-sec-4 .feature-content{ width: 70%; }
+
+.cons-sec-4 .feature h3 {
+    font-size: 1.2em;
+    color: #333; /* Text color */
+    flex: 1;
+    text-align: left; /* Align text to left */
+}
+
+.cons-sec-4 .feature p {
+    font-size: 1em;
+    color: #777; /* Text color */
+    flex: 3;
+    margin-left: 20px;
+    line-height: 1.5; /* Line height for better readability */
+}
+
+/* General styles for the cons-sec-5 section */
+.cons-sec-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #fff; /* Background color for better readability */
+    min-height: 50vh; /* Adjust height as needed */
+}
+
+.cons-sec-5 .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1000px; /* Adjust max-width as needed */
+    width: 100%;
+    gap: 10px;
+}
+
+.cons-sec-5 .box {
+    flex: 1;
+    padding: 20px 40px;
+    border-radius: 10px; /* Optional: for rounded corners */
+}
+
+.cons-sec-5 .left-box {
+    background: linear-gradient(90deg, #97B0B9 0%, #94B9FF 100%);
+    color: white;
+}
+
+.cons-sec-5 .right-box {
+    color: black;
+}
+
+.cons-sec-5 h3 {
+    color: black;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.cons-sec-5 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cons-sec-5 ul li {
+    margin-bottom: 10px;
+    font-size: 1em;
+    position: relative;
+    padding-left: 20px;
+}
+
+.cons-sec-5 ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4a76a8; /* Color for checkmark */
+    font-weight: bold;
+}
+
+.cons-sec-5 .register-button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+}
+
+.cons-sec-5 .register-button:hover {
+    background-color: #444; /* Button hover color */
+}
+
+
+
+/* FOOTER */
+.footer {
+    background-color: #fff;
+    padding: 20px 75px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.footer-left img {
+    height: 160px;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-center h2 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.footer-center h2 a {
+    color: #2A4D69; /* Color del enlace */
+    text-decoration: none;
+}
+
+.footer-center .register-button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-right h3 {
+    margin-bottom: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+.footer-right p {
+    margin: 5px 0;
+    color: #9CA3AF;
+}
+
+.footer-right a, .footer-bottom a {
+    color: #9CA3AF;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 10px;
+    font-size: 0.9em;
+    color: #777;
+    position: relative;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom .centered {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.footer-bottom .social-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-bottom .social-icons img {
+    height: 20px; /* Ajustar según sea necesario */
+}
