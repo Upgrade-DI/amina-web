@@ -74,6 +74,13 @@ p {
     font-family: 'Inter-Light', sans-serif;
 } */
 
+h1 {
+    font-weight: 100;
+}
+
+h2 {
+    font-weight: 100;
+}
 
 /*Eliminamos márgenes del "body" */
 html, body {
@@ -203,26 +210,26 @@ header div a{ margin: 0px 10px; color: white; }
 .sec-2 .item {
     position: relative;
     width: 25%;
-    height: 400px; /* Adjust height as needed */
+    height: 400px;
     background-size: cover;
-    background-position: center;
+    background-position: 0%;
     transition: transform 0.5s ease-in-out;
 }
 
 .sec-2 .item-1 {
-    background-image: url('../../_images/rec2.jpg');
+    background-image: url('../../_images/SuministroCalificado.jpg');
 }
 
 .sec-2 .item-2 {
-    background-image: url('../../_images/rec3.jpg');
+    background-image: url('../../_images/TBFinsyTBPots.jpg');
 }
 
 .sec-2 .item-3 {
-    background-image: url('../../_images/rec4.jpg');
+    background-image: url('../../_images/Certificados.jpg');
 }
 
 .sec-2 .item-4 {
-    background-image: url('../../_images/rec4.jpg');
+    background-image: url('../../_images/EnSitio.jpg');
 }
 
 .sec-2 .item .text-overlay {
@@ -251,7 +258,6 @@ header div a{ margin: 0px 10px; color: white; }
 }
 
 
-
 .sec-3 {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Dos columnas */
@@ -267,6 +273,7 @@ header div a{ margin: 0px 10px; color: white; }
     display: flex;
     flex-direction: column;
     position: relative;
+    transition: transform 0.5s ease-in-out; /* Añadir transición al contenedor */
 }
 
 .sec-3 .item .content {
@@ -284,6 +291,7 @@ header div a{ margin: 0px 10px; color: white; }
     background: linear-gradient(90deg, #97B0B9 0%, #94B9FF 100%);
     padding: 10px 0; /* Ajusta el padding según necesites */
     text-align: center;
+    overflow: hidden; /* Para evitar que la imagen se salga del contenedor */
 }
 
 .sec-3 .item-2 .image-container,
@@ -297,7 +305,16 @@ header div a{ margin: 0px 10px; color: white; }
     display: block;
     margin: 0 auto;
     border-radius: 10px;
+    transition: transform 0.5s ease-in-out; /* Transición para la imagen */
     margin-bottom: -20px;
+}
+
+.sec-3 .item:hover {
+    z-index: 10;
+}
+
+.sec-3 .item:hover img {
+    transform: scale(1.2); /* Ajustar escala según sea necesario */
 }
 
 .sec-3 .item h2 {
@@ -325,6 +342,7 @@ header div a{ margin: 0px 10px; color: white; }
 .sec-3 .item button:hover {
     background-color: #365f85; /* Color de fondo del botón al pasar el cursor */
 }
+
 
 .sec-4 {
     display: flex;

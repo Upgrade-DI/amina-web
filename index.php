@@ -45,7 +45,7 @@
                 <button>Más información</button>
             </div>
             <div class="image-container">
-                
+            <img src="./_images/rectangle.jpg" alt="Imagen inferior">
             </div>
         </div>
         <div class="item item-2">
