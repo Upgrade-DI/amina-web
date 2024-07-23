@@ -68,7 +68,48 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 				$("#section-content").text("Contenido específico para Circle 2 sobre compraventa de productos de energía (PPA) y objetivos de sostenibilidad.");
 				$(".text-content").addClass("active");
 			});
+
+
+			var $popupForm = $('#popupForm');
+
+			$('.open-popup-btn').on('click', function() {
+				$popupForm.show();
+			});
+
+			$('#closePopupBtn, #popupForm').on('click', function() {
+				$popupForm.hide();
+			});
+
+			// Prevenir que el popup desaparezca al hacer clic dentro de él
+			$('.popup-content').on('click', function(event) {
+				event.stopPropagation();
+			});
+
+			 // Manejar el envío del formulario con AJAX
+			 $('#registrationForm').on('submit', function(event) {
+				event.preventDefault(); // Evitar el envío normal del formulario
 		
+				var formData = $(this).serialize(); // Serializar los datos del formulario
+		
+				$.ajax({
+					url: 'https://upgrade.red/amina/_includes/_php/querys.php', // Reemplaza con la URL a la que se enviarán los datos
+					type: 'POST',
+					data: formData,
+					success: function(response) {
+						// Manejar la respuesta del servidor
+						console.log(response);
+						if(response == 1){
+							$('.popup-content').html('<span class="close-btn" id="closePopupBtn">×</span><h2>¡Te has registrado correctamente!</h2><p style="text-align: center;font-size: 1.2em;margin: 30px;">Gracias por llenar tus datos, pronto nos pondremos en contacto.</p>');
+						}
+						//$popupForm.hide();
+					},
+					error: function(jqXHR, textStatus, errorThrown) {
+						// Manejar los errores
+						alert('Error en el registro: ' + textStatus);
+					}
+				});
+			});
+
 		});
 
 //Cambio de tamaño en la vetana

@@ -10,6 +10,6 @@
     </menu>
 	<div>
 		<a href="">Ingresar</a>
-		<a id="btn_register" href="">Registrate</a>
+		<span id="btn_register" class="open-popup-btn" href="">Registrate</span>
 	</div>
 </header>

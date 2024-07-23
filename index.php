@@ -17,7 +17,7 @@
                 <h2>Eleva tu toma de decisión: <br>
                 Analiza, compara y contrata <span>la mejor oferta del mercado</span></h2>
                 <p>Crea RFPs y ofertas para suministro calificado, productos financieros del mercado, certificados y soluciones en sitio. Gestiona tus procesos de adquisición de energía conectando con compradores y vendedores a través de Amina.</p>
-                <button id="cta-button">Regístrate aquí</button>
+                <button id="cta-button" class="open-popup-btn">Regístrate aquí</button>
             </div>
             <div id="image-container">
                 <img src="./_images/rec1.jpg" alt="Interfaz">
@@ -188,6 +188,53 @@
             <img src="./_images/imagen.jpg" alt="Imagen de RFP Minera MR">
         </div>
     </section>
+        <div id="popupForm" class="popup-form">
+            <div class="popup-content">
+                <span class="close-btn" id="closePopupBtn">&times;</span>
+                <h2>Solicitud de acceso</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <form id="registrationForm" action="#">
+                    <div class="form-group">
+                        <div class="form-column">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-column">
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-column">
+                            <label for="phone">Teléfono:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-column">
+                            <label for="company">Empresa:</label>
+                            <input type="text" id="company" name="company" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-column">
+                            <label for="position">Puesto:</label>
+                            <input type="text" id="position" name="position" required>
+                        </div>
+                        <div class="form-column">
+                            <label for="type">Tipo:</label>
+                            <select id="type" name="type" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="CI">Consumidor Industrial</option>
+                                <option value="PM">Participante de Mercado</option>
+                                <option value="DA">Desarrollador infraestructura en sitio</option>
+                                <option value="DI">Trader-asesor</option>
+                                <option value="OT">Otro</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">Registrar</button>
+                </form>
+            </div>
+        </div>
         <div id="footer_cut">
             <?php include_once("phpAssets/footer.php"); ?>
         </div>
