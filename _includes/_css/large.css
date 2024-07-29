@@ -144,9 +144,9 @@ header div a{ margin: 0px 10px; color: white; }
 
 /* HOME */
 .sec-1, .cons-sec-1 {
-    background-image: url('../../_images/sec-1.jpg');
-    background-size: cover;
-    background-position: center;
+    /*background-image: url('../../_images/sec-1.jpg');*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
     padding: 120px 60px;
     display: flex;
     align-items: center;
@@ -155,24 +155,53 @@ header div a{ margin: 0px 10px; color: white; }
     position: relative; /* Asegura que el contenido esté debajo del header */
     min-height: calc(83vh - 91px); /* Asegura que la sección ocupe al menos la altura de la ventana */
 }
+.sec-1 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 120px 60px;
+    color: white;
+    min-height: calc(83vh - 91px); /* Asegura que la sección ocupe al menos la altura de la ventana */
+    overflow: hidden; /* Asegura que el contenido no se desborde */
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
 
 .sec-1 div {
     flex: 1;
     margin: 20px;
+    position: relative;
+    z-index: 1; /* Coloca el contenido por encima del video */
 }
 
-.sec-1 h2 {
-    font-size: 2em;
+.sec-1 div div { 
+    display: block;
+    max-width: 750px;
+    margin: auto;
+}
+
+.sec-1 h1 {
+    font-size: 2.5em;
     margin-bottom: 20px;
 }
 
 .sec-1 span {
     color: black;
+    display: block;
 }
 
 .sec-1 p {
     line-height: 1.6em;
-    font-size: 1em;
+    font-size: 1.2em;
     margin-bottom: 30px;
 }
 
@@ -210,10 +239,25 @@ header div a{ margin: 0px 10px; color: white; }
 .sec-2 .item {
     position: relative;
     width: 25%;
-    height: 400px;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.sec-2 .item:before {
+    content: "";
+    display: block;
+    padding-top: 200%; /* Altura como el doble del ancho */
+}
+
+.sec-2 .item .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     background-size: cover;
-    background-position: 0%;
-    transition: transform 0.5s ease-in-out;
+    background-position: center;
 }
 
 .sec-2 .item-1 {
@@ -234,27 +278,34 @@ header div a{ margin: 0px 10px; color: white; }
 
 .sec-2 .item .text-overlay {
     position: absolute;
-    bottom: 40px;
-    left: 10px;
-    right: 10px;
-    text-align: center;
+    display: flex;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 20%, rgba(0, 0, 0, 0) 100%);
+    justify-content: center;
+    align-items: flex-end; /* Alinea el contenido al final */
 }
+    .sec-2 .item .text-overlay span {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
 
 .sec-2 .item:hover {
     z-index: 10;
+    transition: transform 0.5s ease-in-out;
 }
 
 .sec-2 .item:nth-child(odd):hover {
-    transform: scaleX(2);
-    transform-origin: left;
+    transform: scale(1.1);
+    transform-origin: bottom left;
 }
 
 .sec-2 .item:nth-child(even):hover {
-    transform: scaleX(2);
-    transform-origin: right;
+    transform: scale(1.1);
+    transform-origin: bottom center;
 }
 
 

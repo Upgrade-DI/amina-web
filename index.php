@@ -13,11 +13,17 @@
     <?php include_once("phpAssets/analytics.php"); ?>
     <div id="big-container">
         <section class="sec-1">
+        <video autoplay muted loop id="background-video">
+            <source src="https://upgrade.red/amina/_videos/amina_home.mp4" type="video/mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
             <div>
-                <h2>Eleva tu toma de decisión: <br>
-                Analiza, compara y contrata <span>la mejor oferta del mercado</span></h2>
-                <p>Crea RFPs y ofertas para suministro calificado, productos financieros del mercado, certificados y soluciones en sitio. Gestiona tus procesos de adquisición de energía conectando con compradores y vendedores a través de Amina.</p>
-                <button id="cta-button" class="open-popup-btn">Regístrate aquí</button>
+                <div>
+                    <h1>Eleva tu toma de decisión: <br>
+                    Analiza, compara y contrata <span>la mejor oferta del mercado</span></h1>
+                    <p>Crea RFPs y ofertas para suministro calificado, productos financieros del mercado, certificados y soluciones en sitio. Gestiona tus procesos de adquisición de energía conectando con compradores y vendedores a través de Amina.</p>
+                    <button id="cta-button" class="open-popup-btn">Regístrate aquí</button>
+                </div>
             </div>
             <div id="image-container">
                 <img src="./_images/rec1.jpg" alt="Interfaz">
@@ -25,16 +31,16 @@
         </section>
         <section class="sec-2">
             <div class="item item-1">
-                <div class="text-overlay">Suministro</div>
+                <div class="text-overlay"><span>Suministro</span></div>
             </div>
             <div class="item item-2">
-                <div class="text-overlay">TBFins y TBPots</div>
+                <div class="text-overlay"><span>TBFins y TBPots</span></div>
             </div>
             <div class="item item-3">
-                <div class="text-overlay">Certificados</div>
+                <div class="text-overlay"><span>Certificados</span></div>
             </div>
             <div class="item item-4">
-                <div class="text-overlay">SFV y SAEB</div>
+                <div class="text-overlay"><span>SFV y SAEB</span></div>
             </div>
         </section>
       <section class="sec-3">
