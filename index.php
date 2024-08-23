@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div id="image-container">
-                <img src="./_images/rec1.jpg" alt="Interfaz">
+                <img src="./_images/home/home_amina_dashboard.svg" alt="Amina Dashboard">
             </div>
         </section>
         <section class="sec-2">
