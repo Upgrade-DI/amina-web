@@ -19,9 +19,8 @@
         </video>
             <div>
                 <div>
-                    <h1>Eleva tu toma de decisión: <br>
-                    Analiza, compara y contrata <span>la mejor oferta del mercado</span></h1>
-                    <p>Crea RFPs y ofertas para suministro calificado, productos financieros del mercado, certificados y soluciones en sitio. Gestiona tus procesos de adquisición de energía conectando con compradores y vendedores a través de Amina.</p>
+                    <h1>La plataforma para analizar, comparar y elegir productos de <span>energía</span></h1>
+                    <p>Crea RFPs y propuestas para soluciones energéticas. Optimiza tus procesos de descarbonización.</p>
                     <button id="cta-button" class="open-popup-btn">Regístrate aquí</button>
                 </div>
             </div>
@@ -31,23 +30,23 @@
         </section>
         <section class="sec-2">
             <div class="item item-1">
-                <div class="text-overlay"><span>Suministro</span></div>
+                <div class="text-overlay"><span>Suministro Eléctrico</span></div>
             </div>
             <div class="item item-2">
-                <div class="text-overlay"><span>TBFins y TBPots</span></div>
+                <div class="text-overlay"><span>Transacciones de mercado</span></div>
             </div>
             <div class="item item-3">
-                <div class="text-overlay"><span>Certificados</span></div>
+                <div class="text-overlay"><span>Descarbonización</span></div>
             </div>
             <div class="item item-4">
-                <div class="text-overlay"><span>SFV y SAEB</span></div>
+                <div class="text-overlay"><span>Infraestructura en Sitio</span></div>
             </div>
         </section>
       <section class="sec-3">
         <div class="item item-1">
             <div class="content">
                 <h2>Consumidores</h2>
-                <p>Optimiza el proceso de realizar un PPA</p>
+                <p>Optimiza el proceso de realizar un PPA y reduce tus emisiones</p>
                 <button>Más información</button>
             </div>
             <div class="image-container">
@@ -56,18 +55,18 @@
         </div>
         <div class="item item-2">
             <div class="content">
-                <h2>Usuario Calificado Participante del Mercado</h2>
-                <p>Maximiza tu potencial como consumidor de energía</p>
+                <h2>Descarbonización</h2>
+                <p>Ruta integral hacia la carboneutralidad</p>
                 <button>Más información</button>
             </div>
             <div class="image-container">
-                <img src="./_images/mockup.jpg" alt="Imagen inferior">
+                <img src="./_images/home/sec3-descarbonizacion.svg" alt="Descarbonización">
             </div>
         </div>
         <div class="item item-3">
             <div class="content">
-                <h2>Participantes del Mercado</h2>
-                <p>La herramienta que simplifica tu participación en el mercado</p>
+                <h2>Usuario Calificado Participante del Mercado</h2>
+                <p>Maximiza tu potencial como consumidor de energía</p>
                 <button>Más información</button>
             </div>
             <div class="image-container">
@@ -76,8 +75,8 @@
         </div>
         <div class="item item-4">
             <div class="content">
-                <h2>Instalaciones en sitio</h2>
-                <p>Fuentes de energía renovable y eficiencia energética</p>
+                <h2>Participantes del Mercado</h2>
+                <p>La herramienta que simplifica tu participación en el mercado</p>
                 <button>Más información</button>
             </div>
             <div class="image-container">
@@ -89,15 +88,15 @@
         <div class="left-column">
             <div class="card">
                 <h3>Simplificando Conexiones <span class="arrow">&#9660;</span></h3>
-                <p class="content">Encuentra fácilmente las empresas consumidoras y vendedoras de energía al acceder a la plataforma.</p>
+                <p class="content">Encuentra fácilmente las empresas consumidoras y proveedoras de energía al acceder a la plataforma.</p>
             </div>
             <div class="card">
                 <h3>Acelerando Decisiones <span class="arrow">&#9660;</span></h3>
-                <p class="content">Contenido adicional para Acelerando Decisiones.</p>
+                <p class="content">Accede a procesos de descarbonización. Elige la mejor ruta utilizando las herramientas de planeación y análisis.</p>
             </div>
             <div class="card">
                 <h3>Múltiples Soluciones <span class="arrow">&#9660;</span></h3>
-                <p class="content">Contenido adicional para Múltiples Soluciones.</p>
+                <p class="content">Elige entre una variedad de productos tanto para consumidores como para proveedores, diseñadas para ofrecer el máximo valor.</p>
             </div>
         </div>
         <div class="right-column">
@@ -106,9 +105,9 @@
     </section>
     <section class="sec-5">
         <div class="text-content">
-            <h2 id="section-title">Optimización</h2>
-            <h3 id="section-subtitle">COMPARA ESCENARIOS Y OFERTAS</h3>
-            <p id="section-content">Encuentra acuerdos de compraventa de productos de energía (PPA) que satisfagan necesidades específicas y contribuyan al cumplimiento de los objetivos globales de sostenibilidad.</p>
+            <h2 id="section-title">Eleva tu toma de decisión</h2>
+            <h3 id="section-subtitle">COMPARA ESCENARIOS Y PROPUESTAS</h3>
+            <p id="section-content">Encuentra todos los productos del mercado eléctrico en un mismo lugar.</p>
         </div>
         <div class="image-content">
                 <svg width="640" height="620" viewBox="0 0 640 620" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -186,9 +185,9 @@
     </section>
     <section class="sec-6">
         <div class="left-column">
-            <h2>Potencia tu capacidad de contratación de energía y productos:</h2>
-            <h3>Genera y distribuye tus páginas de RFP con los ofertantes.</h3>
-            <p>Amina proporciona una plataforma intuitiva y automatizada que simplifica la comunicación entre los compradores y los ofertantes. Desde la creación hasta la evaluación y selección de ofertas, podrás encontrar las herramientas para generar, analizar y comparar de forma visual y numérica.</p>
+            <h2>Facilitamos la creación de RFPs con nuestros formatos pre-cargados y automatizados.</h2>
+            <h3>Tu solo validas y envías.</h3>
+            <p></p>
         </div>
         <div class="right-column">
             <img src="./_images/imagen.jpg" alt="Imagen de RFP Minera MR">

@@ -107,40 +107,67 @@ header {
     padding: 20px 60px;
     box-sizing: border-box;
     color: white;
-    position: absolute; /* Asegura que el header esté encima del contenido */
+    position: fixed; /* Asegura que el header esté encima del contenido */
     width: 100%; /* Asegura que el header ocupe todo el ancho */
     top: 0; /* Posiciona el header en la parte superior */
-	z-index: 1;
+	z-index: 100;
 }
 
-#logo {
-    width: 150px;
-}
+    #logo {
+        width: 150px;  /* Ajusta al tamaño deseado */
+        height: 50px;  /* Ajusta al tamaño deseado */
+        background-image: url('../../_images/logo.svg');
+        background-size: contain; /* Ajusta la imagen al contenedor */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-position: center;
+    }
 
-#menu_header {
-    flex: 1;
-    text-align: center;
-}
+    #menu_header {
+        flex: 1;
+        text-align: center;
+    }
 
-#menu_header a {
-    color: white;
-    margin: 0 10px;
-}
+    #menu_header a {
+        color: white;
+        margin: 0 10px;
+    }
+    #menu_header a:hover {
+        border-bottom: #FFF solid 2px;
+    }
 
-header div a{ margin: 0px 10px; color: white; }
+    header div a{ margin: 0px 10px; color: white; }
 
-#btn_register {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 8px;
-    border: none; /* Remover bordes por defecto */
-    cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
-}
+    #btn_register {
+        background-color: black;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 8px;
+        border: none; /* Remover bordes por defecto */
+        cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+    }
 
-#btn_register:hover {
-    background-color: #444; /* Color de fondo al pasar el mouse */
-}
+    #btn_register:hover {
+        background-color: #444; /* Color de fondo al pasar el mouse */
+    }
+    
+    /* SCROLL */
+    header.scrolled {
+        background-color: white; /* Cambia el fondo a blanco */
+        color: black; /* Cambia el color del texto a negro */
+        box-shadow: rgba(0, 0, 0, .1) 0px 6px 4px; /* Añade una sombra sutil si lo deseas */
+        transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    }
+        
+        header.scrolled #logo {
+            background-image: url('../../_images/logo_alt.svg'); /* Usa la versión negra del logo */
+        }
+
+        header.scrolled #menu_header a, header.scrolled #menu_signin a {
+            color: black;
+            border-bottom-color: #000;
+        }
+
+
 
 /* HOME */
 .sec-1, .cons-sec-1 {
@@ -182,6 +209,9 @@ header div a{ margin: 0px 10px; color: white; }
     position: relative;
     z-index: 1; /* Coloca el contenido por encima del video */
 }
+.sec-1 div:first-child{
+    max-width: 680px;
+}
 
 .sec-1 div div { 
     display: block;
@@ -195,7 +225,7 @@ header div a{ margin: 0px 10px; color: white; }
 }
 
 .sec-1 span {
-    color: black;
+    font-family: 'Inter-Bold';
     display: block;
 }
 
@@ -261,19 +291,19 @@ header div a{ margin: 0px 10px; color: white; }
 }
 
 .sec-2 .item-1 {
-    background-image: url('../../_images/SuministroCalificado.jpg');
+    background-image: url('../../_images/home/banner2_suministro.jpg');
 }
 
 .sec-2 .item-2 {
-    background-image: url('../../_images/TBFinsyTBPots.jpg');
+    background-image: url('../../_images/home/banner2_tbfins.jpg');
 }
 
 .sec-2 .item-3 {
-    background-image: url('../../_images/Certificados.jpg');
+    background-image: url('../../_images/home/banner2_cert.jpg');
 }
 
 .sec-2 .item-4 {
-    background-image: url('../../_images/EnSitio.jpg');
+    background-image: url('../../_images/home/banner2_ensitio.jpg');
 }
 
 .sec-2 .item .text-overlay {
@@ -294,18 +324,18 @@ header div a{ margin: 0px 10px; color: white; }
     }
 
 .sec-2 .item:hover {
-    z-index: 10;
-    transition: transform 0.5s ease-in-out;
+   /* z-index: 10;
+    transition: transform 0.5s ease-in-out;*/
 }
 
 .sec-2 .item:nth-child(odd):hover {
-    transform: scale(1.1);
-    transform-origin: bottom left;
+    /*transform: scale(1.1);
+    transform-origin: bottom left;*/
 }
 
 .sec-2 .item:nth-child(even):hover {
-    transform: scale(1.1);
-    transform-origin: bottom center;
+    /*transform: scale(1.1);
+    transform-origin: bottom center;*/
 }
 
 
@@ -340,9 +370,12 @@ header div a{ margin: 0px 10px; color: white; }
 
 .sec-3 .item .image-container {
     background: linear-gradient(90deg, #97B0B9 0%, #94B9FF 100%);
-    padding: 10px 0; /* Ajusta el padding según necesites */
+    padding: 0px;
     text-align: center;
     overflow: hidden; /* Para evitar que la imagen se salga del contenedor */
+    position: relative;
+    display: block;
+    padding-top: 28%;
 }
 
 .sec-3 .item-2 .image-container,
@@ -351,13 +384,15 @@ header div a{ margin: 0px 10px; color: white; }
 }
 
 .sec-3 .item img {
-    max-width: 60%;
+    position: absolute;
+    width: 75%;
     height: auto;
     display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    transition: transform 0.5s ease-in-out; /* Transición para la imagen */
-    margin-bottom: -20px;
+    border-radius: 25px;
+    top: 30%;
+    left: 50%; /* Mueve el elemento horizontalmente al 50% del contenedor */
+    transform: translateX(-50%); /* Compensa el 50% del ancho del elemento para centrarlo */
+    transition: all 0.3s; 
 }
 
 .sec-3 .item:hover {
@@ -365,7 +400,7 @@ header div a{ margin: 0px 10px; color: white; }
 }
 
 .sec-3 .item:hover img {
-    transform: scale(1.2); /* Ajustar escala según sea necesario */
+    top: 10%;
 }
 
 .sec-3 .item h2 {
@@ -421,27 +456,33 @@ header div a{ margin: 0px 10px; color: white; }
     padding: 20px;
     border-radius: 15px;
     border: 1px solid var(--Light, #D2DDF8);
-    position: relative;
     cursor: pointer; /* Cambia el cursor para indicar que se puede hacer clic */
     transition: background-color 0.3s, color 0.3s;
 }
 
 .sec-4 .card h3 {
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: black; /* Color del título */
+    color: #496692; /* Color del título */
 }
 
 .sec-4 .card .arrow {
     font-size: .75em;
-}
+}   
 
 .sec-4 .card .content {
-    display: none;
-    font-size: 1em;
+    font-size: 1.2em;
+    opacity: 0;
+    max-height: 0;
+    max-width: 75%;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+
 }
 
 .sec-4 .card.active {
@@ -454,8 +495,19 @@ header div a{ margin: 0px 10px; color: white; }
 
 .sec-4 .card.active .content {
     display: block;
-    padding: 0px 10px;
+    
 }
+
+.sec-4 .card:hover {
+    background-color: #D2DDF8;
+}
+.sec-4 .card:hover .content {
+    opacity: 1;
+    padding: 15px 0px;
+    margin: 0px 10px;
+    max-height: 100px; /* Ajusta según la altura máxima que necesites */
+}
+
 
 .sec-4 .right-column img {
     max-width: 80%;
@@ -521,6 +573,7 @@ header div a{ margin: 0px 10px; color: white; }
     justify-content: space-between;
     background: linear-gradient(90deg, #97B0B9 0%, #94B9FF 100%); /* Fondo degradado */
     padding: 0px 75px;
+    min-height: 400px;
 }
 
 .sec-6 .left-column,

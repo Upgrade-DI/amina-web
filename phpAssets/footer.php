@@ -4,7 +4,7 @@
             <img src="./_images/footer.jpg" alt="Logo">
         </div>
         <div class="footer-center">
-            <h2>Crea, analiza, compara y <a href="#">contrata</a></h2>
+            <h2>Energía y Descarbonización</h2>
             <button class="register-button">Regístrate aquí</button>
         </div>
         <div class="footer-right">
