@@ -12,6 +12,7 @@
 <!-- <link href="_includes/_fontastic/styles.css" rel="stylesheet" type="text/css"/>  -->
 
 <!-- CSS General -->
+<link rel="stylesheet" type="text/css" href="_includes/_css/root.css">
 <link rel="stylesheet" type="text/css" href="_includes/_css/large.css">
 <link rel="stylesheet" type="text/css" media="only screen and (min-width:1025px) and (max-width:1600px)"  href="_includes/_css/regular.css">
 <link rel="stylesheet" type="text/css" media="only screen and (min-width:10px) and (max-width:600px)"   href="_includes/_css/small.css">

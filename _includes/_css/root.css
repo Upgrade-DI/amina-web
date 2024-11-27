@@ -1,0 +1,65 @@
+:root {
+
+    /* === Colores de Fondo === */
+    --body-bg: #FFFFFF;
+    --bg-sec-a: #E6EEFE; /* Fondo para secciones claras */
+    --bg-sec-b: #e8edf3; /* Fondo intermedio */
+    --bg-sec-c: #d1d9e3; /* Fondo oscuro de las secciones */
+    --bg-footer: #121740; /* Fondo del footer */
+
+    /* === Colores de Botones === */
+    --bg-btn: #245aff; /* Color principal del botón */
+    --bg-btn-hover: #0056b3; /* Hover del botón principal */
+    --bg-btn-alt: #434697; /* Color alternativo para botones */
+    --bg-btn-alt-hover: #2e3575; /* Hover del botón alternativo */
+
+    /* === Colores de Texto === */
+    --font-p: #333333; /* Texto para párrafos */
+    --font-p-hover: #000000; /* Hover de texto de párrafos */
+    --font-p-alt: #555555; /* Color alternativo para párrafos */
+    --font-p-alt-hover: #333333; /* Hover alternativo de texto de párrafos */
+
+    --font-h1: #05092D; /* Título principal */
+    --font-h2: #121740; /* Títulos secundarios */
+
+    /* === Logos === */
+    --sq-logo: url(../../_images/_logos/logo_sq.svg); /* Logo cuadrado */
+    --main-logo: url(../../_images/_logos/logo_main.svg); /* Logo principal */
+    --main-logo-alt: url(../../_images/_losgos/logo_main_alt.svg); /* Logo alternativo */
+    --sq-logo-bg: transparent;
+
+    /* === Colores de Estado (Ejemplo: éxito, error, alerta) === */
+    --color-success: #28a745; /* Verde para éxito */
+    --color-error: #dc3545; /* Rojo para error */
+    --color-warning: #ffc107; /* Amarillo para alerta */
+    --color-info: #17a2b8; /* Azul para información */
+
+    /* === Colores Generales === */
+    --color-primary: #121740; /* Color primario general */
+    --color-secondary: #434697; /* Color secundario general */
+    --color-highlight: #007BFF; /* Color de realce */
+    --color-muted: #adadc6; /* Color tenue */
+    --color-white: #FFFFFF; /* Blanco */
+    --coor-black: #000; /* Negro */
+
+    /* === Colores de Borde === */
+    --border-color: #e3e4ea; /* Borde general */
+    --border-color-alt: #c4c8d1; /* Borde alternativo */
+
+    /* === Menú y Navegación === */
+    --menu-bg: #f5f8fa; /* Fondo del menú */
+    --menu-text: #05092D; /* Texto del menú */
+    --menu-hover: #007BFF; /* Hover del menú */
+    --menu-active: #121740; /* Color para menú activo */
+
+    /* === Tipografía === */
+    --font-primary: 'Inter-Regular', sans-serif; /* Tipografía base */
+    --font-secondary: 'Inter-Bold', sans-serif; /* Tipografía para títulos */
+
+    /* === Espaciados === */
+    --space-xs: 0.25rem; /* Espaciado extra pequeño */
+    --space-sm: 0.5rem; /* Espaciado pequeño */
+    --space-md: 1rem; /* Espaciado mediano */
+    --space-lg: 1.5rem; /* Espaciado grande */
+    --space-xl: 2rem; /* Espaciado extra grande */
+}

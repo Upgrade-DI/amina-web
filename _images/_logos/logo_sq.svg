@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 175 175">
+  <!-- Generator: Adobe Illustrator 29.0.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 186)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #45a5e0;
+      }
+
+      .st1 {
+        fill: url(#Degradado_sin_nombre);
+      }
+
+      .st1, .st2, .st3 {
+        fill-rule: evenodd;
+      }
+
+      .st2 {
+        fill: url(#Degradado_sin_nombre_3);
+      }
+
+      .st3 {
+        fill: url(#Degradado_sin_nombre_2);
+      }
+    </style>
+    <linearGradient id="Degradado_sin_nombre" data-name="Degradado sin nombre" x1="11" y1="53.6" x2="112.8" y2="53.2" gradientTransform="translate(0 177) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0178c2"/>
+      <stop offset="0" stop-color="#1285cc"/>
+      <stop offset=".2" stop-color="#2e9adc"/>
+      <stop offset=".3" stop-color="#43aae9"/>
+      <stop offset=".4" stop-color="#53b6f2"/>
+      <stop offset=".5" stop-color="#5cbcf7"/>
+      <stop offset=".7" stop-color="#5fbff9"/>
+      <stop offset="1" stop-color="#5fbff9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_2" data-name="Degradado sin nombre 2" x1="151.8" y1="22.2" x2="92.9" y2="113.8" gradientTransform="translate(0 177) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0178c2"/>
+      <stop offset="0" stop-color="#1486cd"/>
+      <stop offset=".2" stop-color="#2f9bdd"/>
+      <stop offset=".2" stop-color="#44abe9"/>
+      <stop offset=".4" stop-color="#53b6f2"/>
+      <stop offset=".5" stop-color="#5cbcf7"/>
+      <stop offset=".7" stop-color="#5fbff9"/>
+      <stop offset="1" stop-color="#5fbff9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="Degradado_sin_nombre_3" data-name="Degradado sin nombre 3" x1="102.9" y1="152.2" x2="51.8" y2="64.6" gradientTransform="translate(0 177) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0178c2"/>
+      <stop offset="0" stop-color="#1184cb"/>
+      <stop offset=".2" stop-color="#2d99db"/>
+      <stop offset=".3" stop-color="#43aae8"/>
+      <stop offset=".4" stop-color="#52b5f1"/>
+      <stop offset=".5" stop-color="#5cbcf7"/>
+      <stop offset=".7" stop-color="#5fbff9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path class="st1" d="M67,105.9c-.4-.4-.7-.8-1.1-1.2-5.1-5.4-12.4-8.8-20.5-8.8-15.5,0-28.1,12.4-28.1,27.8s12.6,27.8,28.1,27.8,15.6-3.5,20.7-9c.2-.3.5-.5.7-.8,5.1-5.5,12.5-9,20.7-9s15.6,3.5,20.7,9c.3.3.5.5.7.8,5.1,5.6,12.5,9,20.7,9,15.5,0,28-12.5,28-27.8s-12.6-27.8-28-27.8-15.4,3.4-20.5,8.8c-.4.4-.7.8-1.1,1.2-5.1,5.4-12.4,8.8-20.5,8.8s-15.4-3.4-20.5-8.8Z"/>
+  <path class="st0" d="M126.8,23.5c1.7,0,3.3.7,4.4,1.8,1.1,1.1,1.8,2.7,1.8,4.4s-.7,3.3-1.8,4.4c-1.1,1.1-2.7,1.8-4.4,1.8s-3.3-.7-4.4-1.8c-1.1-1.1-1.8-2.7-1.8-4.4s.7-3.3,1.8-4.4c1.1-1.1,2.7-1.8,4.4-1.8ZM124.8,32.6v-5.8h2.7c0,0,.2,0,.2,0,.4,0,.6.2.9.3.2.2.4.4.5.7,0,.3.2.5.2.9s-.1.9-.4,1.2c-.2.2-.4.4-.6.5l1.1,2.2h-1.1l-1-2h-1.4v2h-1,0ZM125.8,29.7h1.6c0,0,.1,0,.2,0,.2,0,.3-.1.4-.2,0,0,.2-.2.2-.3,0-.1,0-.3,0-.4s0-.3,0-.4c0-.2-.1-.3-.2-.4,0,0-.2-.2-.4-.2,0,0-.1,0-.2,0,0,0-.1,0-.2,0h-1.4v2h0ZM130.4,26.1c-.9-.9-2.2-1.5-3.6-1.5s-2.7.6-3.6,1.5c-.9.9-1.5,2.2-1.5,3.6s.6,2.7,1.5,3.6c.9.9,2.2,1.5,3.6,1.5s2.7-.6,3.6-1.5c.9-.9,1.5-2.2,1.5-3.6s-.6-2.7-1.5-3.6Z"/>
+  <path class="st3" d="M113.9,61c.2-.5.3-1,.5-1.5,2.2-7.1,1.5-15.1-2.5-22-7.8-13.3-24.9-17.9-38.4-10.2-13.4,7.7-18,24.7-10.3,38,4.1,7,10.8,11.6,18.2,13.3.4,0,.7.1,1.1.2,7.4,1.6,14.1,6.2,18.2,13.3,4.1,7,4.8,15.1,2.5,22.3-.1.3-.2.7-.4,1-2.3,7.2-1.7,15.3,2.4,22.3,7.8,13.3,24.9,17.8,38.3,10.2,13.4-7.7,18-24.7,10.3-38-4.1-7-10.7-11.5-18-13.2-.5,0-1.1-.2-1.6-.3-7.3-1.7-13.9-6.3-18-13.2-4.1-6.9-4.7-14.9-2.5-22h0Z"/>
+  <path class="st2" d="M61.1,61c-.2-.5-.3-1-.5-1.5-2.2-7.1-1.5-15.1,2.5-22,7.8-13.3,24.9-17.9,38.4-10.2,13.4,7.7,18,24.7,10.3,38-4.1,7-10.8,11.6-18.2,13.3-.4,0-.7.1-1.1.2-7.4,1.6-14.1,6.2-18.2,13.3-3.1,5.4-4.2,11.4-3.6,17.2-1.3-1-2.6-2.1-3.7-3.3-.4-.4-.7-.8-1.1-1.2-5.1-5.4-12.4-8.8-20.5-8.8s-3.2.1-4.8.4h0c7.3-1.7,13.9-6.3,18-13.2,4.1-6.9,4.7-14.9,2.5-22h0Z"/>
+</svg>
