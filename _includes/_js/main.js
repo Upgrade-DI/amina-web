@@ -90,8 +90,9 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 	document.addEventListener('DOMContentLoaded', function() {
 
 console.log('DOMContentLoaded');
-		// --- HEADER SCROLL
-		window.addEventListener('scroll', function() {
+
+// GENERAL --- HEADER SCROLL
+		/*window.addEventListener('scroll', function() {
 			console.log(window.scrollY);
 			const header = document.querySelector('header');
 			if (window.scrollY > 50) {
@@ -99,8 +100,107 @@ console.log('DOMContentLoaded');
 			} else {
 				header.classList.remove('scrolled');
 			}
+		});*/
+
+
+// HOME --- CONNECTIONS
+		const connectionItems = document.querySelectorAll('.connection_item');
+			
+		connectionItems.forEach(item => {
+			item.addEventListener('click', function() {
+				// Remove active class from all items
+				connectionItems.forEach(i => i.classList.remove('active'));
+				// Add active class to clicked item
+				this.classList.add('active');
+			});
 		});
-	});
+
+
+// HOME --- CIRCLES
+
+		const circles = document.querySelectorAll('.circle');
+		const infos = document.querySelectorAll('.info');
+		let autoRotationInterval = null;
+		let isHovered = false;
+
+		function setActiveInfo(dataCircle, isAuto = false) {
+			const activeInfo = document.querySelector('.info.active');
+			const newActiveInfo = document.querySelector(`.info[data-info="${dataCircle}"]`);
+
+			if (activeInfo === newActiveInfo) return;
+
+			if (activeInfo) {
+				activeInfo.classList.remove('active');
+				activeInfo.addEventListener('transitionend', function handler() {
+					this.style.display = 'none';
+					this.removeEventListener('transitionend', handler);
+				});
+			}
+
+			if (newActiveInfo) {
+				newActiveInfo.style.display = 'block';
+				// Forzar un reflow
+				newActiveInfo.offsetHeight;
+				newActiveInfo.classList.add('active');
+			}
+
+			// Manejar el resaltado de círculos
+			circles.forEach(circle => {
+				if (circle.getAttribute('data-circle') === dataCircle) {
+					if (isAuto) {
+						circle.classList.add('auto-highlight');
+					} else {
+						circle.classList.remove('auto-highlight');
+					}
+				} else {
+					circle.classList.remove('auto-highlight');
+				}
+			});
+		}
+
+		function startAutoRotation() {
+			if (autoRotationInterval || isHovered) return;
+			
+			autoRotationInterval = setInterval(() => {
+				if (isHovered) {
+					clearInterval(autoRotationInterval);
+					autoRotationInterval = null;
+					return;
+				}
+				
+				const activeInfo = document.querySelector('.info.active');
+				const nextInfo = activeInfo.nextElementSibling || infos[0];
+				setActiveInfo(nextInfo.getAttribute('data-info'), true);
+			}, 5000);
+		}
+
+		circles.forEach(circle => {
+			circle.addEventListener('mouseenter', function() {
+				isHovered = true;
+				if (autoRotationInterval) {
+					clearInterval(autoRotationInterval);
+					autoRotationInterval = null;
+				}
+				const dataCircle = this.getAttribute('data-circle');
+				setActiveInfo(dataCircle);
+			});
+
+			circle.addEventListener('mouseleave', function() {
+				this.classList.remove('auto-highlight');
+			});
+		});
+
+		document.querySelector('.section_decision_circles').addEventListener('mouseleave', () => {
+			isHovered = false;
+			startAutoRotation();
+		});
+
+		// Iniciar con el primer círculo activo y la rotación automática
+		setActiveInfo('control', true);
+		startAutoRotation();
+
+		
+}); // DOCUMENT READY NATIVO END
 	
 
 //Cambio de tamaño en la vetana

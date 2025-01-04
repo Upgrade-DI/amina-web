@@ -1,0 +1,17 @@
+/* === HEADER === */
+
+.main-header{
+    padding: var(--space-sm) var(--space-xs);
+}
+
+.main-header .container{
+    width:98%;
+}
+
+.main-nav {
+    font-size: 1.2vw;
+}
+
+.main-nav ul{
+    gap: 1rem;
+} 

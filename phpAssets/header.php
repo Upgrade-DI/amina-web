@@ -5,12 +5,12 @@
         </div>
         <nav class="main-nav">
             <ul>
-                <li><a href="index.php">Soluciones</a></li>
-                <li><a href="componentes.php">Componentes</a></li>
-                <li><a href="ucdm.php">UCDM</a></li>
-                <li><a href="mercado.php">Participantes MEM</a></li>
-                <li><a href="transacciones.php">Transacciones</a></li>
-                <li><a href="informacion.php">Información y conocimiento</a></li>
+                <li><a href="soluciones.php">Soluciones</a></li>
+                <li><a href="consumidores-energia.php">Consumidores de Energía</a></li>
+                <li><a href="usuario-calificado.php">Usuario Calificado</a></li>
+                <li><a href="participantes-mem.php">Participantes MEM</a></li>
+                <li><a href="infraestructura-energeticos.php">Infraestructura y Energéticos</a></li>
+                <li><a href="descarbonizacion.php">Descarbonización</a></li>
             </ul>
         </nav>
         <div class="auth-buttons">

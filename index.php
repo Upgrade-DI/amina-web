@@ -54,11 +54,21 @@
 
     <!-- Columna Derecha: Galería de imágenes -->
     <div class="section_solution_gal">
-        <div class="image suministro" data-hover="suministro"></div>
-        <div class="image infraestructura" data-hover="infraestructura"></div>
-        <div class="image descarbonizacion" data-hover="descarbonizacion"></div>
-        <div class="image transacciones" data-hover="transacciones"></div>
+        <div class="image suministro" data-hover="suministro">
+            <span class="image-title">Suministro<br>Eléctrico</span>
+        </div>
+        <div class="image infraestructura" data-hover="infraestructura">
+            <span class="image-title">Infraestructura y<br>Energéticos</span>
+        </div>
+        <div class="image descarbonizacion" data-hover="descarbonizacion">
+            <span class="image-title">Descarbonización</span>
+        </div>
+        <div class="image transacciones" data-hover="transacciones">
+            <span class="image-title">Transacciones de<br>Mercado</span>
+        </div>
     </div>
+
+
 </section>
 
 <!-- SECTION SOLUTION END -->
@@ -91,26 +101,25 @@
 <!-- SECTION CUADRANTES END -->
 
  <!-- SECTION CONNECTIONS -->
-
- <section class="section_connections">
+<section class="section_connections">
     <!-- Columna Izquierda -->
     <div class="connections_content">
-        <div class="connection_item">
+        <div class="connection_item active">
             <div class="connection_card">
                 <h3>Simplificando Conexiones</h3>
-                <p class="hidden_content">Encuentra fácilmente las empresas consumidoras y vendedoras de energía al acceder a la plataforma.</p>
+                <p class="hidden_content">Encuentra fácilmente empresas que consumen y proveen energía accediendo a la plataforma.</p>
             </div>
         </div>
         <div class="connection_item">
             <div class="connection_card">
                 <h3>Acelerando Decisiones</h3>
-                <p class="hidden_content">Facilitamos la toma de decisiones rápida y precisa a través de análisis detallados.</p>
+                <p class="hidden_content">Accede a procesos de descarbonización. Elige la mejor ruta utilizando las herramientas de planeación y análisis.</p>
             </div>
         </div>
         <div class="connection_item">
             <div class="connection_card">
                 <h3>Múltiples Soluciones</h3>
-                <p class="hidden_content">Ofrecemos una variedad de soluciones para satisfacer las necesidades energéticas de cada cliente.</p>
+                <p class="hidden_content">Elige entre una variedad de productos de diferentes proveedores, diseñados para ofrecer el máximo valor.</p>
             </div>
         </div>
     </div>
@@ -120,7 +129,98 @@
         <img src="_images/_home/connections_example.svg" alt="Amina - Conexiones">
     </div>
 </section>
- <!-- SECTION CONNECTIONS END -->
+<!-- SECTION CONNECTIONS END -->
+
+
+
+<!-- SECTION DECISION CIRCLES -->
+<section class="section_decision_circles">
+    <div class="decision_content">
+        <h2>Eleva tu toma de decisión</h2>
+        <div class="decision_text">
+            <div class="info" data-info="control">
+                <p>Gestiona toda tu información y procesos de manera segura desde un solo lugar.</p>
+            </div>
+            <div class="info" data-info="evalua">
+                <p>Analiza, compara y selecciona utilizando múltiples herramientas y datos para tomar decisiones informadas.</p>
+            </div>
+            <div class="info" data-info="asesora">
+                <p>Preparación y evaluación de RFPs, con soporte para procesos clave.</p>
+            </div>
+            <div class="info" data-info="ofertas">
+                <p>Los RFPs garantizan un entorno competitivo con acceso a las mejores propuestas del mercado.</p>
+            </div>
+            <div class="info" data-info="carboneutralidad">
+                <p>Adquiere productos que reflejan un sólido compromiso con un futuro descarbonizado.</p>
+            </div>
+        </div>
+    </div>
+    <div class="circles_wrapper">
+        <div class="circles_background">
+            <div class="ring ring-1"></div>
+            <div class="ring ring-2"></div>
+            <div class="center-logo">
+                <img src="_images/_home/logo-center.svg" alt="Logo Amina">
+            </div>
+        </div>
+        <div class="circles_container">
+            <div class="circle" data-circle="control">
+                <img src="_images/_home/icon_control.svg" alt="Icono de Control">
+                <span class="circle_name">Control</span>
+            </div>
+            <div class="circle" data-circle="evalua">
+                <img src="_images/_home/icon_evalua.svg" alt="Icono de Evalúa">
+                <span class="circle_name">Evalúa</span>
+            </div>
+            <div class="circle" data-circle="asesora">
+                <img src="_images/_home/icon_asesora.svg" alt="Icono de Asesora">
+                <span class="circle_name">Asesora</span>
+            </div>
+            <div class="circle" data-circle="ofertas">
+                <img src="_images/_home/icon_ofertas.svg" alt="Icono de Ofertas">
+                <span class="circle_name">Ofertas</span>
+            </div>
+            <div class="circle" data-circle="carboneutralidad">
+                <img src="_images/_home/icon_carboneutralidad.svg" alt="Icono de Carboneutralidad">
+                <span class="circle_name">Carboneutralidad</span>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SECTION DECISION CIRCLES END -->
+
+
+
+<!-- SECTION VALIDATE AND SEND -->
+<section class="section_validate_send">
+    <div class="validate_mockup">
+        <div class="browser_frame">
+            <div class="browser_dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="browser_content">
+                <img src="_images/_logos/logo_main_alt.svg" alt="Amina Logo" class="mockup_logo">
+                <h3>Minera MR</h3>
+                <p>RFP 200 GWh Solares y 20 MW</p>
+                <button class="btn_review">Revisar Consumos</button>
+                <div class="mockup_text">
+                    <h4>Minera MR RFP</h4>
+                    <h5>Introducción</h5>
+                    <p>Es un placer extenderles una cordial invitación para participar en nuestro proceso de solicitud de propuestas (RFP) para la provisión de energía solar a la empresa Minera MR. Como líderes en la industria minera, en Minera MR estamos comprometidos con la sostenibilidad y la innovación en todas nuestras operaciones.</p>
+                    <p>El objetivo de esta RFP es asegurar la adquisición de 200 GWh/año energía solar y 20 MW de potencia para satisfacer las necesidades energéticas de nuestras operaciones.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="validate_content">
+        <h2>Valida y envía</h2>
+        <p>Simplificamos la creación de RFPs con nuestras plantillas pre-cargadas y automatizadas.</p>
+    </div>
+</section>
+<!-- SECTION VALIDATE AND SEND END -->
+
 
         <div id="footer_cut">
             <?php include_once("phpAssets/footer.php"); ?>

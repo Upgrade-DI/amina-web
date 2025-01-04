@@ -1,0 +1,212 @@
+/* SECTION SOLUTION ITEM */
+.section_solution_item {
+    display: flex;
+    align-items: center;
+    padding: 4rem 6rem;
+    gap: 6rem;
+    background-color: var(--bg-sec-a); /* Update 1: Changed background color */
+    min-height: 600px;
+}
+
+.section_solution_item.reverse {
+    flex-direction: row-reverse;
+    background-color: var(--bg-white);
+}
+
+/* Content Side */
+.solution_content {
+    flex: 0 0 45%;
+    max-width: 600px;
+    padding: 2rem 0;
+}
+
+.solution_content h2 {
+    font-size: 2.5rem;
+    color: var(--font-h);
+    margin-bottom: 1.5rem;
+    font-weight: normal;
+}
+
+.solution_content p {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--font-p);
+    margin-bottom: 2rem;
+}
+
+.participants_box {
+    background-color: #D3DFFE;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+.participants_box h3 {
+    color: var(--font-h);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.participants_box p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+/* Image Side */
+.solution_image {
+    flex: 0 0 55%;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto; /* Added from updates */
+    height: 500px;
+}
+
+.solution_image img {
+    width: auto;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 0px auto;
+    display: block;
+}
+
+.solution_image.dual-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.solution_image.dual-image img:first-child {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.solution_image.dual-image img:last-child {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+
+
+/* Tags for Suministro Eléctrico */
+.image_tags {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+}
+
+.image_tags .tag {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95); /* Update 2: Changed background color and added box-shadow */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    color: var(--font-p);
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Update 2: Added box-shadow */
+}
+
+/* Grid for Descarbonización */
+.grid_image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    max-width: 500px;
+}
+
+.grid_item {
+    position: relative;
+    aspect-ratio: 1;
+    max-height: 240px;
+}
+
+.grid_item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.grid_label {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: var(--color-white);
+    font-size: 1.125rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--bg-btn);
+    color: var(--color-white);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--bg-btn-hover);
+}
+
+/* Responsive */
+@media (max-width: 1280px) {
+    .section_solution_item {
+        padding: 3rem 4rem;
+        gap: 4rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .section_solution_item {
+        flex-direction: column;
+        padding: 3rem 2rem;
+        gap: 2rem;
+    }
+
+    .section_solution_item.reverse {
+        flex-direction: column;
+    }
+
+    .solution_content, .solution_image {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .solution_image {
+        padding-left: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .section_solution_item {
+        padding: 2rem 1rem;
+    }
+
+    .solution_content h2 {
+        font-size: 2rem;
+    }
+
+    .image_tags .tag {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
