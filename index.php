@@ -30,7 +30,6 @@
 
 
 <!-- SECTION SOLUTION -->
-
 <section class="section_solution">
     <!-- Columna Izquierda: Contenido de texto -->
     <div class="section_solution_content">
@@ -49,29 +48,40 @@
                 TRANSACCIONES DE MERCADO <span class="arrow">→</span>
             </li>
         </ul>
-        <a href="#" class="btn-solutions">Soluciones</a>
+        <a href="soluciones.php" class="btn-solutions">Soluciones</a>
     </div>
 
     <!-- Columna Derecha: Galería de imágenes -->
     <div class="section_solution_gal">
         <div class="image suministro" data-hover="suministro">
             <span class="image-title">Suministro<br>Eléctrico</span>
+            <div class="description">
+                Amina es un software especializado en la procura de energía. Mediante nuestro concurso de adquisición explora propuestas de suministro eléctrico y elige la opción óptima para las necesidades de tu empresa.
+            </div>
         </div>
         <div class="image infraestructura" data-hover="infraestructura">
             <span class="image-title">Infraestructura y<br>Energéticos</span>
+            <div class="description">
+                Tecnologías de eficiencia energética avanzadas, reducción de costos de energía y disminución de la huella de carbono. Compara proveedores, términos financieros y rendimiento con nuestras herramientas.
+            </div>
         </div>
         <div class="image descarbonizacion" data-hover="descarbonizacion">
             <span class="image-title">Descarbonización</span>
+            <div class="description">
+                Crea estrategias de descarbonización adaptadas a tu empresa. Tener tus datos de emisiones y el plan de reducción en Amina te ofrece una claridad inmediata sobre el impacto de tus acciones.
+            </div>
         </div>
         <div class="image transacciones" data-hover="transacciones">
             <span class="image-title">Transacciones de<br>Mercado</span>
+            <div class="description">
+                La plataforma es ideal para participantes del mercado, permitiéndoles encontrar ofertas de productos del mercado al igual que la opción en poder mostrar sus productos para conectar con compradores potenciales.
+            </div>
         </div>
     </div>
-
-
 </section>
-
 <!-- SECTION SOLUTION END -->
+
+
 
 <!-- SECTION CUADRANTES -->
 <section class="section_services">

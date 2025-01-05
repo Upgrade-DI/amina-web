@@ -13,9 +13,9 @@
                 <li><a href="descarbonizacion.php">Descarbonización</a></li>
             </ul>
         </nav>
-        <div class="auth-buttons">
+        <!--<div class="auth-buttons">
             <a href="login.php" class="btn-login">Ingresar</a>
             <a href="register.php" class="btn-register">Registrarse</a>
-        </div>
+        </div>-->
     </div>
 </header>

@@ -87,120 +87,170 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 
 
 	// DOCUMENT READY NATIVO
-	document.addEventListener('DOMContentLoaded', function() {
+// [Previous code remains exactly the same until the DOMContentLoaded event listener]
 
-console.log('DOMContentLoaded');
+document.addEventListener('DOMContentLoaded', function() {
+    
+    console.log('DOMContentLoaded');
 
-// GENERAL --- HEADER SCROLL
-		/*window.addEventListener('scroll', function() {
-			console.log(window.scrollY);
-			const header = document.querySelector('header');
-			if (window.scrollY > 50) {
-				header.classList.add('scrolled');
-			} else {
-				header.classList.remove('scrolled');
-			}
-		});*/
-
-
-// HOME --- CONNECTIONS
-		const connectionItems = document.querySelectorAll('.connection_item');
-			
-		connectionItems.forEach(item => {
-			item.addEventListener('click', function() {
-				// Remove active class from all items
-				connectionItems.forEach(i => i.classList.remove('active'));
-				// Add active class to clicked item
-				this.classList.add('active');
-			});
-		});
+    // GENERAL --- HEADER SCROLL
+    /*window.addEventListener('scroll', function() {
+        console.log(window.scrollY);
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });*/
 
 
-// HOME --- CIRCLES
+    // HOME --- CONNECTIONS
+    const connectionItems = document.querySelectorAll('.connection_item');
+        
+    connectionItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Remove active class from all items
+            connectionItems.forEach(i => i.classList.remove('active'));
+            // Add active class to clicked item
+            this.classList.add('active');
+        });
+    });
 
-		const circles = document.querySelectorAll('.circle');
-		const infos = document.querySelectorAll('.info');
-		let autoRotationInterval = null;
-		let isHovered = false;
 
-		function setActiveInfo(dataCircle, isAuto = false) {
-			const activeInfo = document.querySelector('.info.active');
-			const newActiveInfo = document.querySelector(`.info[data-info="${dataCircle}"]`);
+    // HOME --- CIRCLES
+    const circles = document.querySelectorAll('.circle');
+    const infos = document.querySelectorAll('.info');
+    let autoRotationInterval = null;
+    let isHovered = false;
 
-			if (activeInfo === newActiveInfo) return;
+    function setActiveInfo(dataCircle, isAuto = false) {
+        const activeInfo = document.querySelector('.info.active');
+        const newActiveInfo = document.querySelector(`.info[data-info="${dataCircle}"]`);
 
-			if (activeInfo) {
-				activeInfo.classList.remove('active');
-				activeInfo.addEventListener('transitionend', function handler() {
-					this.style.display = 'none';
-					this.removeEventListener('transitionend', handler);
-				});
-			}
+        if (activeInfo === newActiveInfo) return;
 
-			if (newActiveInfo) {
-				newActiveInfo.style.display = 'block';
-				// Forzar un reflow
-				newActiveInfo.offsetHeight;
-				newActiveInfo.classList.add('active');
-			}
+        if (activeInfo) {
+            activeInfo.classList.remove('active');
+            activeInfo.addEventListener('transitionend', function handler() {
+                this.style.display = 'none';
+                this.removeEventListener('transitionend', handler);
+            });
+        }
 
-			// Manejar el resaltado de círculos
-			circles.forEach(circle => {
-				if (circle.getAttribute('data-circle') === dataCircle) {
-					if (isAuto) {
-						circle.classList.add('auto-highlight');
-					} else {
-						circle.classList.remove('auto-highlight');
-					}
-				} else {
-					circle.classList.remove('auto-highlight');
-				}
-			});
-		}
+        if (newActiveInfo) {
+            newActiveInfo.style.display = 'block';
+            // Forzar un reflow
+            newActiveInfo.offsetHeight;
+            newActiveInfo.classList.add('active');
+        }
 
-		function startAutoRotation() {
-			if (autoRotationInterval || isHovered) return;
-			
-			autoRotationInterval = setInterval(() => {
-				if (isHovered) {
-					clearInterval(autoRotationInterval);
-					autoRotationInterval = null;
-					return;
-				}
-				
-				const activeInfo = document.querySelector('.info.active');
-				const nextInfo = activeInfo.nextElementSibling || infos[0];
-				setActiveInfo(nextInfo.getAttribute('data-info'), true);
-			}, 5000);
-		}
+        // Manejar el resaltado de círculos
+        circles.forEach(circle => {
+            if (circle.getAttribute('data-circle') === dataCircle) {
+                if (isAuto) {
+                    circle.classList.add('auto-highlight');
+                } else {
+                    circle.classList.remove('auto-highlight');
+                }
+            } else {
+                circle.classList.remove('auto-highlight');
+            }
+        });
+    }
 
-		circles.forEach(circle => {
-			circle.addEventListener('mouseenter', function() {
-				isHovered = true;
-				if (autoRotationInterval) {
-					clearInterval(autoRotationInterval);
-					autoRotationInterval = null;
-				}
-				const dataCircle = this.getAttribute('data-circle');
-				setActiveInfo(dataCircle);
-			});
+    function startAutoRotation() {
+        if (autoRotationInterval || isHovered) return;
+        
+        autoRotationInterval = setInterval(() => {
+            if (isHovered) {
+                clearInterval(autoRotationInterval);
+                autoRotationInterval = null;
+                return;
+            }
+            
+            const activeInfo = document.querySelector('.info.active');
+            const nextInfo = activeInfo.nextElementSibling || infos[0];
+            setActiveInfo(nextInfo.getAttribute('data-info'), true);
+        }, 5000);
+    }
 
-			circle.addEventListener('mouseleave', function() {
-				this.classList.remove('auto-highlight');
-			});
-		});
+    circles.forEach(circle => {
+        circle.addEventListener('mouseenter', function() {
+            isHovered = true;
+            if (autoRotationInterval) {
+                clearInterval(autoRotationInterval);
+                autoRotationInterval = null;
+            }
+            const dataCircle = this.getAttribute('data-circle');
+            setActiveInfo(dataCircle);
+        });
 
-		document.querySelector('.section_decision_circles').addEventListener('mouseleave', () => {
-			isHovered = false;
-			startAutoRotation();
-		});
+        circle.addEventListener('mouseleave', function() {
+            this.classList.remove('auto-highlight');
+        });
+    });
 
-		// Iniciar con el primer círculo activo y la rotación automática
-		setActiveInfo('control', true);
-		startAutoRotation();
+    document.querySelector('.section_decision_circles').addEventListener('mouseleave', () => {
+        isHovered = false;
+        startAutoRotation();
+    });
 
-		
+    // Iniciar con el primer círculo activo y la rotación automática
+    setActiveInfo('control', true);
+    startAutoRotation();
+
+// HOME --- SECTION SOLUTION
+const solutionItems = document.querySelectorAll('.section_solution_content ul li');
+const solutionImages = document.querySelectorAll('.section_solution_gal .image');
+
+// Function to remove active class from all items
+function removeActiveClass() {
+    solutionItems.forEach(item => item.classList.remove('active'));
+    solutionImages.forEach(image => image.classList.remove('active'));
+}
+
+// Add hover event listeners to list items
+solutionItems.forEach(item => {
+    item.addEventListener('mouseenter', function() {
+        const target = this.getAttribute('data-target');
+        removeActiveClass();
+        this.classList.add('active');
+        document.querySelector(`.image[data-hover="${target}"]`).classList.add('active');
+    });
+});
+
+// Add hover event listeners to images
+solutionImages.forEach(image => {
+    let hoverTimeout;
+    image.addEventListener('mouseenter', function() {
+        const target = this.getAttribute('data-hover');
+        removeActiveClass();
+        this.classList.add('active');
+        document.querySelector(`li[data-target="${target}"]`).classList.add('active');
+        
+        // Retraso para la aparición del texto
+        clearTimeout(hoverTimeout);
+        hoverTimeout = setTimeout(() => {
+            this.querySelector('.description').style.opacity = '1';
+        }, 300);
+    });
+    
+    image.addEventListener('mouseleave', function() {
+        clearTimeout(hoverTimeout);
+        this.querySelector('.description').style.opacity = '0';
+        this.classList.remove('active');
+    });
+});
+
+
+
+    
 }); // DOCUMENT READY NATIVO END
+
+// [Rest of the code remains exactly the same]
+
+
 	
 
 //Cambio de tamaño en la vetana

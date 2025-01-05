@@ -23,7 +23,7 @@
     <!-- SECTION BANNER END -->
 
     <!-- MAIN DESCRIPTION -->
-    <div class="main-description">
+    <div class="banner_text">
         <p>Crea un proceso de compra de energía, evalúa, evita acuerdos riesgosos y asegura el mejor PPA en un proceso automatizado.</p>
     </div>
 
