@@ -112,7 +112,7 @@ a{ text-decoration: none; }
 .main-header {
     background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: var(--space-md) var(--space-lg);
+    padding: 10px;
     position: sticky;
     top: 0;
     left: 0;
@@ -334,7 +334,6 @@ a{ text-decoration: none; }
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-xl) var(--space-lg);
     background: linear-gradient(135deg, #121740, #1b58b8); /* Degradado de fondo */
     background-size: cover;
     background-repeat: no-repeat;
@@ -342,7 +341,7 @@ a{ text-decoration: none; }
     color: var(--font-color-light); /* Color de texto en blanco */
     position: relative;
     overflow: hidden;
-    height: 80vh; /* Ajusta la altura según tus necesidades */
+    min-height: calc(100vh - 80px); /* Ajusta la altura según tus necesidades */
 }
 
 .main-banner-content {
@@ -420,6 +419,7 @@ a{ text-decoration: none; }
 .section_solution {
     display: flex;
     height: 100vh;
+    min-height: 500px;
     max-height: 800px;
 }
 
@@ -496,15 +496,29 @@ a{ text-decoration: none; }
     overflow: hidden;
 }
 
+.section_solution_gal .image .solution_gradient {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+}
+
+.section_solution_gal .image.active {
+    width: 55%;
+}
 .section_solution_gal .image .image-title {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    bottom: 10px;
+    left: 45px;
     color: white;
     font-size: 1.2em;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     z-index: 2;
     transition: opacity 0.3s ease;
+    transform: rotate(-90deg);
+    transform-origin: left;
 }
 
 .section_solution_gal .image .description {
@@ -608,14 +622,14 @@ a{ text-decoration: none; }
 }
 
 .service_image {
-    width:75%;
+    width: 75%;
     height: 0;
-    background-size: contain;
+    background-size: cover;
     border-radius: 8px;
     padding-top: 32%;
     box-shadow: 0 -20px 70px rgba(66, 70, 225, 0.15);
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: center top;
 }
 
 
@@ -641,16 +655,15 @@ a{ text-decoration: none; }
 .consumo_energia { background-image: url('../../_images/_home/consumidores.png'); }
 .participantes_mem { background-image: url('../../_images/_home/participantes.png'); }
 .infraestructura_energeticos { background-image: url('../../_images/_home/infraestructura_y_energeticos.png'); }
-.descarbonizacion { background-image: url('../../_images/_home/Descarbonizacion.png'); }
+.descarbonizacion { background-image: url('../../_images/_home/Descarbonizacion.svg'); }
 
 /* SECTION CUADRANTES END */
-
-
 
 
 /* SECTION CONNECTIONS */
 .section_connections {
     display: flex;
+    min-height: 100vh;
     gap: var(--space-lg);
     padding: var(--space-xl) var(--space-lg);
     background-color: var(--bg-sec-a);
@@ -1207,13 +1220,12 @@ a{ text-decoration: none; }
 /* SECTION BANNER */
 .section_banner {
     width: 100%;
-    margin-bottom: 4rem;
 }
 
 .banner_image {
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: calc(100vh - 200px);
     overflow: hidden;
 }
 
@@ -1238,16 +1250,21 @@ a{ text-decoration: none; }
 }
 
 .banner_text {
-    max-width: 800px;
-    margin: 2rem auto;
+    width: 100%;
     text-align: center;
     padding: 0 2rem;
+    display: flex;
+    height: 120px;
+    align-items: center;
 }
 
 .banner_text p {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     color: var(--font-p);
+    text-align: center;
+    width: 100%;
+    font-family: 'Inter-Medium';
 }
 
 /* Media queries para ajustes adicionales si son necesarios */

@@ -20,7 +20,7 @@
             <h1>Soluciones</h1>
         </div>
         <div class="banner_text">
-            <p>Accede a múltiples soluciones teniendo la dualidad de ser comprador o vendedor según el producto que requieras o proveas.</p>
+            <p>Accede a múltiples soluciones teniendo la dualidad de ser comprador o<br> vendedor según el producto que requieras o proveas.</p>
         </div>
     </section>
     <!-- SECTION BANNER END -->
@@ -40,12 +40,12 @@
         <div class="solution_image">
             <img src="_images/_soluciones/suministro_electrico.png" alt="Suministro Eléctrico">
             <div class="image_tags">
-                <span class="tag" style="top: 5%; left: 50%; transform: translateX(-50%);">Energía limpia</span>
-                <span class="tag" style="top: 15%; right: 5%;">Competitividad</span>
-                <span class="tag" style="top: 50%; left: 5%;">Eficiencia</span>
-                <span class="tag" style="top: 40%; right: 5%;">Servicio</span>
-                <span class="tag" style="bottom: 30%; left: 5%;">Opciones</span>
-                <span class="tag" style="bottom: 10%; left: 50%; transform: translateX(-50%);">Flexibilidad</span>
+                <span class="tag" style="top: 5%;left: 7%;transform: translateX(-50%);">Energía limpia</span>
+                <span class="tag" style="top: 15%;right: 26%;">Competitividad</span>
+                <span class="tag" style="top: 33%;left: -1%;">Eficiencia</span>
+                <span class="tag" style="top: 40%;right: 0%;">Servicio</span>
+                <span class="tag" style="bottom: 30%;left: 60%;">Opciones</span>
+                <span class="tag" style="bottom: 10%;left: 36%;transform: translateX(-50%);">Flexibilidad</span>
             </div>
         </div>
     </section>
@@ -84,10 +84,10 @@
     <div class="solution_image">
         <img src="_images/_soluciones/descarbonizacion.png" alt="Descarbonización">
         <div class="image_tags">
-            <span class="tag" style="top: 15%; left: 15%;">Mide</span>
-            <span class="tag" style="top: 15%; right: 15%;">Reporta</span>
-            <span class="tag" style="bottom: 15%; left: 15%;">Actúa</span>
-            <span class="tag" style="bottom: 15%; right: 15%;">Selecciona</span>
+            <span class="tag" style="top: 15%;left: 12%;">Mide</span>
+            <span class="tag" style="top: 15%;right: 11%;">Reporta</span>
+            <span class="tag" style="bottom: 15%;left: 12%;">Actúa</span>
+            <span class="tag" style="bottom: 15%;right: 10%;">Selecciona</span>
         </div>
     </div>
 </section>

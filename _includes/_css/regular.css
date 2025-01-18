@@ -1,9 +1,5 @@
 /* === HEADER === */
 
-.main-header{
-    padding: var(--space-sm) var(--space-xs);
-}
-
 .main-header .container{
     width:98%;
 }
@@ -14,4 +10,13 @@
 
 .main-nav ul{
     gap: 1rem;
-} 
+}
+
+
+/* H O M E  */
+
+.main-banner-content h1{
+
+    font-size: 2em;
+
+}

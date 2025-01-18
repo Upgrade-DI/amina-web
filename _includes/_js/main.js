@@ -106,16 +106,52 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // HOME --- CONNECTIONS
-    const connectionItems = document.querySelectorAll('.connection_item');
-        
-    connectionItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Remove active class from all items
-            connectionItems.forEach(i => i.classList.remove('active'));
-            // Add active class to clicked item
-            this.classList.add('active');
-        });
+const connectionItems = document.querySelectorAll('.connection_item');
+const connectionImageContainer = document.querySelector('.connections_image');
+const imagePath = '_images/_home/connections_';
+const imageExtension = '.svg';
+let currentImage = 'a';
+const imageLetters = ['a', 'b', 'c'];
+
+// Función para precargar imágenes
+function preloadImages() {
+    imageLetters.forEach(letter => {
+        const img = new Image();
+        img.src = `${imagePath}${letter}${imageExtension}`;
+        img.style.position = 'absolute';
+        img.style.opacity = '0';
+        img.style.transition = 'opacity 0.3s ease-in-out';
+        connectionImageContainer.appendChild(img);
     });
+}
+
+// Función para cambiar la imagen
+function changeImage(newImage) {
+    const oldImg = connectionImageContainer.querySelector(`img[src="${imagePath}${currentImage}${imageExtension}"]`);
+    const newImg = connectionImageContainer.querySelector(`img[src="${imagePath}${newImage}${imageExtension}"]`);
+
+    if (oldImg && newImg) {
+        oldImg.style.opacity = '0';
+        newImg.style.opacity = '1';
+        currentImage = newImage;
+    }
+}
+
+connectionItems.forEach((item, index) => {
+    item.addEventListener('click', function() {
+        connectionItems.forEach(i => i.classList.remove('active'));
+        this.classList.add('active');
+        
+        const newImage = imageLetters[index];
+        if (newImage !== currentImage) {
+            changeImage(newImage);
+        }
+    });
+});
+
+// Inicializar
+preloadImages();
+changeImage('a');
 
 
     // HOME --- CIRCLES
@@ -201,47 +237,76 @@ document.addEventListener('DOMContentLoaded', function() {
     startAutoRotation();
 
 // HOME --- SECTION SOLUTION
+
 const solutionItems = document.querySelectorAll('.section_solution_content ul li');
 const solutionImages = document.querySelectorAll('.section_solution_gal .image');
+let activeTarget = null;
+let hoverTimeout;
 
-// Function to remove active class from all items
 function removeActiveClass() {
     solutionItems.forEach(item => item.classList.remove('active'));
-    solutionImages.forEach(image => image.classList.remove('active'));
+    solutionImages.forEach(image => {
+        image.classList.remove('active');
+        const description = image.querySelector('.description');
+        if (description) {
+            description.style.opacity = '0';
+        }
+    });
 }
 
-// Add hover event listeners to list items
+function activateElements(target) {
+    if (activeTarget !== target) {
+        removeActiveClass();
+        const item = document.querySelector(`li[data-target="${target}"]`);
+        const image = document.querySelector(`.image[data-hover="${target}"]`);
+        
+        if (item) item.classList.add('active');
+        if (image) {
+            image.classList.add('active');
+            clearTimeout(hoverTimeout);
+            hoverTimeout = setTimeout(() => {
+                const description = image.querySelector('.description');
+                if (description) {
+                    description.style.opacity = '1';
+                }
+            }, 50);
+        }
+        activeTarget = target;
+    }
+}
+
+function deactivateAll() {
+    clearTimeout(hoverTimeout);
+    removeActiveClass();
+    activeTarget = null;
+}
+
 solutionItems.forEach(item => {
     item.addEventListener('mouseenter', function() {
         const target = this.getAttribute('data-target');
-        removeActiveClass();
-        this.classList.add('active');
-        document.querySelector(`.image[data-hover="${target}"]`).classList.add('active');
+        activateElements(target);
     });
 });
 
-// Add hover event listeners to images
 solutionImages.forEach(image => {
-    let hoverTimeout;
     image.addEventListener('mouseenter', function() {
         const target = this.getAttribute('data-hover');
-        removeActiveClass();
-        this.classList.add('active');
-        document.querySelector(`li[data-target="${target}"]`).classList.add('active');
-        
-        // Retraso para la aparición del texto
-        clearTimeout(hoverTimeout);
-        hoverTimeout = setTimeout(() => {
-            this.querySelector('.description').style.opacity = '1';
-        }, 300);
-    });
-    
-    image.addEventListener('mouseleave', function() {
-        clearTimeout(hoverTimeout);
-        this.querySelector('.description').style.opacity = '0';
-        this.classList.remove('active');
+        activateElements(target);
     });
 });
+
+const solutionSection = document.querySelector('.section_solution');
+if (solutionSection) {
+    solutionSection.addEventListener('mouseleave', deactivateAll);
+}
+
+document.addEventListener('mousemove', (event) => {
+    const target = event.target.closest('.section_solution_content ul li, .section_solution_gal .image');
+    if (!target) {
+        deactivateAll();
+    }
+});
+
 
 
 
