@@ -17,7 +17,7 @@
     <section class="section_banner">
         <div class="banner_image">
             <img src="_images/_banners/usuario-calificado.jpg" alt="Usuario Calificado">
-            <h1>Usuario Calificado</h1>
+            <h1>Usuario Calificado Participante del Mercado</h1>
         </div>
         <div class="banner_text">
             <p>Descubre las ventajas y oportunidades disponibles para usuarios calificados en el mercado energético.</p>

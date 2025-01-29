@@ -18,10 +18,11 @@
     padding: 4rem 6rem;
     gap: 6rem;
     background-color: var(--bg-sec-a); /* Updated background color */
+    justify-content: space-evenly;
 }
 
 .proposal_content {
-    flex: 0 0 45%;
+    flex: 0 0 30%;
 }
 
 .proposal_content h2 {
@@ -39,7 +40,7 @@
 }
 
 .proposal_image {
-    flex: 0 0 55%;
+    /*flex: 0 0 55%;*/
 }
 
 .proposal_image img {
@@ -56,7 +57,8 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     padding: 4rem 6rem;
-    background-color: var(--bg-white);
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 .feature_card {
@@ -81,7 +83,7 @@
 
 /* Energy Flow Diagram */
 .energy_flow {
-    padding: 4rem 6rem;
+    padding: 0rem 6rem;
     background-color: transparent; /* Updated background color */
     text-align: center;
 }
@@ -100,7 +102,9 @@
 .process_optimization {
     background-color: #D2DDF8; /* Updated background color */
     padding: 2rem;
-    margin: 2rem 6rem;
+    width: 90%;
+    max-width: 1400px;
+    margin: 4rem auto;
     border-radius: 8px;
 }
 
@@ -135,13 +139,13 @@
 }
 
 .steps_container {
-    max-width: 1200px;
+    width:100%;
     margin: 0 auto;
 }
 
 .steps_header {
     display: flex;
-    margin-bottom: 3rem;
+    justify-content: space-evenly;
 }
 
 .steps_intro {
@@ -167,7 +171,6 @@
 .steps_columns {
     display: flex;
     gap: 2rem;
-    margin-left: auto;
     width: 100%;
     max-width: 800px;
 }

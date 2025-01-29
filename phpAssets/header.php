@@ -7,7 +7,7 @@
             <ul>
                 <li><a href="soluciones.php">Soluciones</a></li>
                 <li><a href="consumidores-energia.php">Consumidores de Energía</a></li>
-                <li><a href="usuario-calificado.php">Usuario Calificado</a></li>
+                <li><a href="usuario-calificado.php">UCPM</a></li>
                 <li><a href="participantes-mem.php">Participantes MEM</a></li>
                 <li><a href="infraestructura-energeticos.php">Infraestructura y Energéticos</a></li>
                 <li><a href="descarbonizacion.php">Descarbonización</a></li>

@@ -16,6 +16,7 @@
     padding: 4rem 6rem;
     gap: 6rem;
     background-color: var(--bg-sec-a);
+    justify-content: space-evenly;
 }
 
 .maximize_content {
@@ -34,10 +35,6 @@
     line-height: 1.6;
     color: var(--font-p);
     margin-bottom: 2rem;
-}
-
-.maximize_image {
-    flex: 0 0 55%;
 }
 
 .maximize_image img {

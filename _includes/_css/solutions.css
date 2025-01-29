@@ -6,6 +6,7 @@
     gap: 6rem;
     background-color: var(--bg-sec-a); /* Update 1: Changed background color */
     min-height: 600px;
+    justify-content: space-evenly;
 }
 
 .section_solution_item.reverse {
@@ -58,7 +59,6 @@
     flex: 0 0 55%;
     position: relative;
     max-width: 600px;
-    margin: 0 auto; /* Added from updates */
     height: 500px;
 }
 

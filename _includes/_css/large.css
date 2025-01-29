@@ -1280,8 +1280,11 @@ a{ text-decoration: none; }
 /* -----> SECTION BANNERS END */
 
 
-/* ------- SOLUCIONES */
+/* ------- GENERAL SECTIONS */
+
+.space_even{
+    justify-content: space-evenly;
+}
 
 
-
-/* ------- SOLUCIONES END */
+/* ------- GENERAL SECTIONS END */
