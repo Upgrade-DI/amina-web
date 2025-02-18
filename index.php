@@ -36,18 +36,19 @@
         <h2>Integramos todas las <br>soluciones de energía <br>en un mismo lugar</h2>
         <ul>
             <li data-target="suministro">
-                SUMINISTRO ELÉCTRICO <span class="arrow">→</span>
+                Suministro Eléctrico <span class="arrow">→</span>
             </li>
             <li data-target="infraestructura">
-                INFRAESTRUCTURA Y ENERGÉTICOS <span class="arrow">→</span>
+                Infraestructura Y Energéticos <span class="arrow">→</span>
             </li>
             <li data-target="descarbonizacion">
-                DESCARBONIZACIÓN <span class="arrow">→</span>
+                Descarbonización <span class="arrow">→</span>
             </li>
             <li data-target="transacciones">
-                TRANSACCIONES DE MERCADO <span class="arrow">→</span>
+                Transacciones De Mercado <span class="arrow">→</span>
             </li>
         </ul>
+
         <a href="soluciones.php" class="btn-solutions">Soluciones</a>
     </div>
 
@@ -81,7 +82,7 @@
                 La plataforma es ideal para participantes del mercado, permitiéndoles encontrar ofertas de productos del mercado al igual que la opción en poder mostrar sus productos para conectar con compradores potenciales.
             </div>
         </div>
-    </div>
+    </div><!-- Contenedor de las imágenes -->
 </section>
 <!-- SECTION SOLUTION END -->
 
@@ -90,15 +91,9 @@
 <!-- SECTION CUADRANTES -->
 <section class="section_services">
     <div class="service_card">
-        <h3>Consumidores de Energía</h3>
+        <h3>Suministro Eléctrico</h3>
         <a href="#" class="btn-info">Más información</a>
         <div class="service_image consumo_energia"></div>
-       
-    </div>
-    <div class="service_card">
-        <h3>Participantes MEM</h3>
-        <a href="#" class="btn-info">Más información</a>
-        <div class="service_image participantes_mem"></div>
     </div>
     <div class="service_card">
         <h3>Infraestructura y Energéticos</h3>
@@ -110,7 +105,13 @@
         <a href="#" class="btn-info">Más información</a>
         <div class="service_image descarbonizacion"></div>
     </div>
+    <div class="service_card">
+        <h3>Transacciones MEM</h3>
+        <a href="#" class="btn-info">Más información</a>
+        <div class="service_image participantes_mem"></div>
+    </div>
 </section>
+
 
 <!-- SECTION CUADRANTES END -->
 

@@ -433,7 +433,7 @@ a{ text-decoration: none; }
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    font-size: 1.2em;
+    /*font-size: 1.2em;*/
     position: relative;
 }
 
@@ -448,6 +448,7 @@ a{ text-decoration: none; }
 .section_solution_content ul {
     list-style: none;
     margin-left: 10%;
+    font-size: 1.2em;
 }
 
 .section_solution_content ul li {
@@ -616,7 +617,7 @@ a{ text-decoration: none; }
 
 .service_card h3 {
     font-family: var(--font-h2);
-    font-size: 2em;
+    font-size: 1.7em;
     color: var(--font-p);
     margin: 20px auto 25px auto;
 }
@@ -644,7 +645,7 @@ a{ text-decoration: none; }
     border-radius: 4px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    margin-bottom: 3.5rem;
+    margin-bottom: 1.5rem;
 }
 
     .service_card  .btn-info:hover {
@@ -663,14 +664,17 @@ a{ text-decoration: none; }
 /* SECTION CONNECTIONS */
 .section_connections {
     display: flex;
-    min-height: 100vh;
-    gap: var(--space-lg);
-    padding: var(--space-xl) var(--space-lg);
+    justify-content: space-between; 
+    gap: var(--space-lg); /* Mantiene un espacio entre ellos */
+    padding: 10vw;
     background-color: var(--bg-sec-a);
     align-items: center;
 }
 
 .connections_content {
+    width: 45%; /* Ancho deseado */
+    max-width: 45%; /* Asegura que no se expanda más de lo esperado */
+    flex-basis: 45%; /* Define la base del tamaño */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -733,14 +737,15 @@ a{ text-decoration: none; }
 
 /* Image styling */
 .connections_image {
-    flex: 1;
+    flex-basis: 45%; /* Define el ancho base */
+    max-width: 45%; /* Evita que se expanda más */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .connections_image img {
-    max-width: 100%;
+    max-width: inherit;
     height: auto;
 }
 
