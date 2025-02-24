@@ -16,7 +16,7 @@
         </nav>
         <div class="auth-buttons">
             <a href="login.php" class="btn-login">Ingresar</a>
-            <!--<a href="register.php" class="btn-register">Registrarse</a>-->
+            <a href="register.php" class="btn-register open-popup-btn">Registrarse</a>
         </div>
     </div>
 </header>

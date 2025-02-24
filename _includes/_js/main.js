@@ -37,54 +37,6 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
 		   tapHandler = 'contextmenu';
 		}
 
-	$(document).ready(function() {
-		"use strict";
-		
-	/* HEADER */
-		// --- REGISTER
-		var $popupForm = $('#popupForm');
-
-		$('.open-popup-btn').on('click', function() {
-			$popupForm.show();
-		});
-
-		$('#closePopupBtn, #popupForm').on('click', function() {
-			$popupForm.hide();
-		});
-
-		// Prevenir que el popup desaparezca al hacer clic dentro de él
-		$('.popup-content').on('click', function(event) {
-			event.stopPropagation();
-		});
-
-		// Manejar el envío del formulario con AJAX
-		$('#registrationForm').on('submit', function(event) {
-			event.preventDefault(); // Evitar el envío normal del formulario
-
-			var formData = $(this).serialize(); // Serializar los datos del formulario
-	
-			$.ajax({
-				url: 'https://upgrade.red/amina/_includes/_php/querys.php', // Reemplaza con la URL a la que se enviarán los datos
-				type: 'POST',
-				data: formData,
-				success: function(response) {
-					// Manejar la respuesta del servidor
-					console.log(response);
-					if(response == 1){
-						$('.popup-content').html('<span class="close-btn" id="closePopupBtn">×</span><h2>¡Te has registrado correctamente!</h2><p style="text-align: center;font-size: 1.2em;margin: 30px;">Gracias por llenar tus datos, pronto nos pondremos en contacto.</p>');
-					}
-					//$popupForm.hide();
-				},
-				error: function(jqXHR, textStatus, errorThrown) {
-					// Manejar los errores
-					alert('Error en el registro: ' + textStatus);
-				}
-			});
-		});
-
-		
-	}); // DOCUMENT READY
-
 
 	// DOCUMENT READY NATIVO
 // [Previous code remains exactly the same until the DOMContentLoaded event listener]
@@ -308,6 +260,79 @@ document.addEventListener('mousemove', (event) => {
 });
 
 
+// REGISTRATION FORM
+
+        const popupForm = document.getElementById('popupForm');
+        const closeBtn = document.getElementById('closePopupBtn');
+        const registrationForm = document.getElementById('registrationForm');
+
+        // Show popup when register buttons are clicked
+        document.querySelectorAll('.open-popup-btn, .btn-register, .btn-register-banner').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                popupForm.style.display = 'flex';
+            });
+        });
+
+        // Close popup when clicking close button or outside
+        closeBtn.addEventListener('click', () => {
+            popupForm.style.display = 'none';
+        });
+
+        popupForm.addEventListener('click', (e) => {
+            if (e.target === popupForm) {
+                popupForm.style.display = 'none';
+            }
+        });
+
+        // Form submission
+        registrationForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch('/sudi-v4-amina/public_html/app/_files/_php/_amina_register.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                console.log('Server response:', data); // Debug: ver la respuesta del servidor
+                
+                if(data === "1") {
+                    // Success message
+                    const successMessage = '<span class="close-btn" id="closePopupBtn">×</span>' +
+                        '<h2>¡Te has registrado correctamente!</h2>' +
+                        '<p style="text-align: center;font-size: 1.2em;margin: 30px;">' +
+                        'Gracias por llenar tus datos, pronto nos pondremos en contacto.</p>';
+                    
+                    document.querySelector('.popup-content').innerHTML = successMessage;
+                    
+                    // Agregar nuevo evento para el botón de cerrar
+                    document.getElementById('closePopupBtn').addEventListener('click', () => {
+                        popupForm.style.display = 'none';
+                    });
+                } else {
+                    // Error message
+                    console.error('Server returned error code:', data); // Debug
+                    if(data === "0") {
+                        alert('El correo electrónico ya está registrado o hubo un error en el registro. Por favor verifica tus datos e intenta nuevamente.');
+                    } else {
+                        alert('Hubo un error al procesar tu registro. Por favor intenta más tarde.');
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error details:', error); // Debug: ver detalles del error
+                alert('Hubo un error en el servidor. Por favor intenta más tarde.');
+            });
+        });
+        // Registration form end
 
 
     
